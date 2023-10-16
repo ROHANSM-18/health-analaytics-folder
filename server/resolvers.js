@@ -1,6 +1,8 @@
 const { Doctor, Patient, VisitAppointment, LabResult, Vital, MedicalHistory } = require('./database');  
 const { format, isValid, parseISO } = require('date-fns');
 
+console.log('RESOLVER CALLED')
+
 const resolvers = {
   Query: {
         getAllPatients: async () => {
