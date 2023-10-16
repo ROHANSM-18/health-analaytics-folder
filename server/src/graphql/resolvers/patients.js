@@ -18,7 +18,9 @@
 // module.exports = resolvers;
 
 
-const { Patient, Doctor } = require('../database');
+const Doctor = require('../../models/doctors')
+const Patient = require('../../models/patients')
+
 
 const getAllPatients = async () => {
   try {
@@ -31,5 +33,9 @@ const getAllPatients = async () => {
   }
 };
 
-module.exports = getAllPatients;
+module.exports = {
+  Query: {
+    getAllPatients,
+  },
+};
 

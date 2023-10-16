@@ -1,7 +1,10 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../db/sequelize');
-const Patient = require('./Patient'); // Import the Patient model if not already imported
-const Doctor = require('./Doctor'); // Import the Doctor model if not already imported
+const sequelize = require('../database/sequelize');
+const Patient = require('./patients'); 
+const Doctor = require('./doctors'); 
+
+
+
 
 const VisitAppointment = sequelize.define('VisitAppointment', {
   VisitID: {
@@ -40,5 +43,6 @@ const VisitAppointment = sequelize.define('VisitAppointment', {
 }, {
   timestamps: false,
 });
+
 
 module.exports = VisitAppointment;

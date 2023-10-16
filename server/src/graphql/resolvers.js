@@ -5,14 +5,16 @@ const getMedicalHistoryByPatientID = require('./resolvers/medicalhistories');
 const getLabResultsByPatientID = require('./resolvers/labresults');
 const getVitalsByPatientID = require('./resolvers/vitals');
 
+
 const resolvers = {
+  
   Query: {
     getAllPatients,
     getAllDoctors,
     getVisitAppointmentsByPatientID,
     getMedicalHistoryByPatientID,
     getLabResultsByPatientID,
-    getVitalsByPatientID,
+    getVitalsByPatientID
   },
 };
 

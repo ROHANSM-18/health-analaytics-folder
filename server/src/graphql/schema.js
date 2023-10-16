@@ -6,6 +6,7 @@ const VisitAppointmentTypeDef = require('./schemas/appointmentschema');
 const LabResultTypeDef = require('./schemas/labresultschema');
 const VitalTypeDef = require('./schemas/vitalschema');
 
+
 const typeDefs = gql`
   scalar Date
   scalar Time

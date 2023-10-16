@@ -1,4 +1,9 @@
-const { VisitAppointment, Patient, Doctor, LabResult, Vital } = require('../database');
+const VisitAppointment = require('../../models/appointments');
+const Patient = require('../../models/patients');
+const Doctor = require('../../models/doctors');
+const LabResult = require('../../models/doctors');
+const Vital = require('../../models/vitals');
+
 
 const getVisitAppointmentsByPatientID = async (_, { PatientID }) => {
   try {
@@ -25,4 +30,11 @@ const getVisitAppointmentsByPatientID = async (_, { PatientID }) => {
   }
 };
 
-module.exports = getVisitAppointmentsByPatientID;
+
+module.exports = {
+  Query: {
+    getVisitAppointmentsByPatientID,
+  },
+};
+
+

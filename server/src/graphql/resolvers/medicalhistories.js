@@ -1,4 +1,6 @@
-const { MedicalHistory , Patient } = require('../database');
+const MedicalHistory = require('../../models/medicalhistories');
+const Patient = require('../../models/patients');
+
 
 const getMedicalHistoryByPatientID = async (_, { PatientID }) => {
   try {
@@ -16,4 +18,8 @@ const getMedicalHistoryByPatientID = async (_, { PatientID }) => {
   }
 };
 
-module.exports = getMedicalHistoryByPatientID;
+module.exports = {
+  Query: {
+    getMedicalHistoryByPatientID,
+  },
+};
